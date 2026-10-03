@@ -19,5 +19,26 @@ public class BatchCollection {
 		new Batch( 110, 1),
 	};
     
-    
+        public static boolean checkNo(int batchNo){
+		for(int i = 0; i<batchNameArray.length; i++){
+			if(batchNameArray[i].getbatchNameArray() == batchNo){
+				return false;
+			}
+		}
+		return true;
+	}
+        
+        
+        public static void addNewBatchNo(int batchNo){
+		Batch[] tempbatchNameArray = new Batch[batchNameArray.length + 1];
+		for(int i=0; i<batchNameArray.length; i++){
+			tempbatchNameArray[i] = batchNameArray[i];
+		}
+		batchNameArray = tempbatchNameArray;
+		//tempbatchNameArray[batchNameArray.length] = batchNo;
+		//batchNameArray = tempbatchNameArray;
+		
+		Batch b1 = new Batch( batchNo, 0);
+		batchNameArray[batchNameArray.length - 1] = b1;
+	}
 }

@@ -22,7 +22,7 @@ public class AccessBatchCollection {
 		}
 		return accessBatchCollection;
 	}
-	public BatchCollection getStudentCollection(){
+	public BatchCollection getBatchCollection(){
 		return batchCollection;
 	}
 }
